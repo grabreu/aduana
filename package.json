@@ -1,0 +1,58 @@
+{
+  "name": "@grabreu/aduana",
+  "version": "0.0.1",
+  "description": "A lightweight, type-safe fetch client for JavaScript/TypeScript.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "preview": "pnpm build",
+    "typecheck": "tsc --noEmit",
+    "format": "biome format",
+    "lint": "biome lint",
+    "check": "biome check",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "fetch",
+    "http",
+    "client"
+  ],
+  "author": "Gabriel Abreu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grabreu/aduana.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grabreu/aduana/issues"
+  },
+  "homepage": "https://github.com/grabreu/aduana#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
