@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/grabreu/aduana/compare/aduana-v1.0.0...aduana-v1.0.1) (2026-09-05)
+
+
+### Bug Fixes
+
+* make isHttpError survive duplicate module instances ([#8](https://github.com/grabreu/aduana/issues/8)) ([b0cbc42](https://github.com/grabreu/aduana/commit/b0cbc420eb6823a7250cdf68c10c1532e276eedc))
+
 ## 1.0.0 (2026-09-05)
 
 
