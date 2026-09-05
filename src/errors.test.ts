@@ -70,6 +70,14 @@ describe("isHttpError", () => {
     expect(isHttpError(err)).toBe(true);
     expect(isHttpError(new Error("other"))).toBe(false);
     expect(isHttpError("string")).toBe(false);
+    expect(isHttpError(null)).toBe(false);
+  });
+
+  it("recognizes an HttpError-shaped object even when it's not an instanceof this HttpError class", () => {
+    class OtherHttpError extends Error {
+      isHttpError = true;
+    }
+    expect(isHttpError(new OtherHttpError("failed"))).toBe(true);
   });
 });
 
