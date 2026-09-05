@@ -51,6 +51,10 @@ jobs:
         if: ${{ steps.release.outputs.releases_created == 'true' }}
         run: pnpm build
 
+      - name: Update npm
+        if: ${{ steps.release.outputs.releases_created == 'true' }}
+        run: npm install -g npm@latest
+
       - name: Publish
         if: ${{ steps.release.outputs.releases_created == 'true' }}
         run: npm publish
