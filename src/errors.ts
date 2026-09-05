@@ -48,7 +48,9 @@ export class HttpError<T = unknown> extends Error {
 }
 
 export const isHttpError = <T = unknown>(err: unknown): err is HttpError<T> =>
-  err instanceof HttpError;
+  !!err &&
+  typeof err === "object" &&
+  (err as { isHttpError?: unknown }).isHttpError === true;
 
 export const isTransientError = (err: unknown): boolean => {
   if (!isHttpError(err)) {
