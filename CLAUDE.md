@@ -14,6 +14,8 @@ Read `README.md` before making changes — it documents the actual public API (`
 - Run formatting, linting, typecheck, build, and tests after changes.
 - Do not change CI/CD configuration unless explicitly required.
 - Do not claim a validation command passed unless it was actually run.
+- Do not fill gaps with assumptions when the user hasn't given the information — ask, or mark it as pending.
+- Code, comments, commit messages, and documentation are always written in English.
 
 ## Source
 
