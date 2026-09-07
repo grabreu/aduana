@@ -128,6 +128,20 @@ describe("HTTP errors", () => {
     await expect(api.post("/upload", new FormData())).rejects.toThrow(/JSON/);
     expect(fetchMock).not.toHaveBeenCalled();
   });
+
+  it("a network failure keeps the original error as .cause for debugging", async () => {
+    const networkError = new TypeError("fetch failed");
+    const fetchMock = vi.fn(async () => {
+      throw networkError;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const api = create({ baseURL: "https://api.com" });
+
+    await expect(api.get("/anything")).rejects.toSatisfy((err: unknown) => {
+      expect((err as HttpError).cause).toBe(networkError);
+      return true;
+    });
+  });
 });
 
 describe("headers", () => {

@@ -62,6 +62,17 @@ describe("HttpError", () => {
     });
     expect(err.problem).toBeUndefined();
   });
+
+  it("exposes the original error as .cause when one is given", () => {
+    const original = new TypeError("fetch failed");
+    const err = new HttpError("Network failure", config, undefined, original);
+    expect(err.cause).toBe(original);
+  });
+
+  it(".cause is undefined when none is given", () => {
+    const err = new HttpError("failed", config);
+    expect(err.cause).toBeUndefined();
+  });
 });
 
 describe("isHttpError", () => {

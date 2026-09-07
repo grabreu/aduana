@@ -113,7 +113,7 @@ export class Aduana {
         : cancelled
           ? "Request cancelled"
           : (anyErr?.message ?? "Network failure");
-      throw new HttpError(message, config);
+      throw new HttpError(message, config, undefined, err);
     } finally {
       if (timer) {
         clearTimeout(timer);
