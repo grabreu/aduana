@@ -35,7 +35,10 @@
     "http",
     "client"
   ],
-  "author": "Gabriel Abreu",
+  "author": {
+    "name": "Gabriel Abreu",
+    "url": "https://github.com/grabreu"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
