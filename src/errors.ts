@@ -34,8 +34,9 @@ export class HttpError<T = unknown> extends Error {
     message: string,
     config: InternalConfig,
     response?: AduanaResponse<T>,
+    cause?: unknown,
   ) {
-    super(message);
+    super(message, cause !== undefined ? { cause } : undefined);
     this.name = "HttpError";
     this.config = config;
     this.response = response;
