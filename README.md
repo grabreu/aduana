@@ -1,7 +1,7 @@
 # aduana
 
-[![CI](https://github.com/grabreu/aduana/actions/workflows/ci.yml/badge.svg)](https://github.com/grabreu/aduana/actions/workflows/ci.yml)
-[![CD](https://github.com/grabreu/aduana/actions/workflows/cd.yml/badge.svg)](https://github.com/grabreu/aduana/actions/workflows/cd.yml)
+[![CI](https://github.com/grabreu/aduana/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/grabreu/aduana/actions/workflows/ci.yml)
+[![CD](https://github.com/grabreu/aduana/actions/workflows/cd.yml/badge.svg?branch=main)](https://github.com/grabreu/aduana/actions/workflows/cd.yml)
 [![npm](https://img.shields.io/npm/v/%40grabreu%2Faduana.svg?style=flat-square&logo=npm&label=%40grabreu%2Faduana)](https://www.npmjs.com/package/@grabreu/aduana)
 [![License](https://img.shields.io/github/license/grabreu/aduana?style=flat-square)](LICENSE)
 
