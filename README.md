@@ -11,6 +11,10 @@ A lightweight, type-safe fetch client for JavaScript/TypeScript.
 npm install @grabreu/aduana
 ```
 
+## Tech stack
+
+TypeScript · Vitest · tsup · Biome · pnpm
+
 ## Why
 
 `fetch` works, but every project ends up rewriting the same boilerplate: joining `baseURL` with query params, JSON-encoding the body, throwing on a non-2xx response, parsing the error body, wiring up timeouts and cancellation. Aduana wraps `fetch` with that behavior built in, plus axios-style interceptors — nothing more.
@@ -96,7 +100,9 @@ pnpm typecheck
 pnpm check       # biome (format + lint + import sort)
 ```
 
-Releases (versioning, changelog, and npm publish) are automated via [release-please](https://github.com/googleapis/release-please) in CD.
+## Deployment
+
+Versioning, changelog, and npm publish are automated by [release-please](https://github.com/googleapis/release-please): merges to `main` update a release PR from Conventional Commits, and merging that PR tags the release and publishes to npm via GitHub Actions.
 
 ## License
 
