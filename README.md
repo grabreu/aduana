@@ -17,7 +17,7 @@ TypeScript · Vitest · tsup · Biome · pnpm
 
 ## Why
 
-`fetch` works, but every project ends up rewriting the same boilerplate: joining `baseURL` with query params, JSON-encoding the body, throwing on a non-2xx response, parsing the error body, wiring up timeouts and cancellation. Aduana wraps `fetch` with that behavior built in, plus axios-style interceptors — nothing more.
+`fetch` works, but every project ends up rewriting the same boilerplate: joining `baseURL` with query params, JSON-encoding the body, throwing on a non-2xx response, parsing the error body, wiring up timeouts and cancellation. Aduana wraps `fetch` with that behavior built in, plus axios-style interceptors, nothing more.
 
 ```ts
 import { create } from "@grabreu/aduana";
@@ -56,7 +56,7 @@ if (isValidationProblemDetails(err.problem)) {
 }
 
 if (isTransientError(err)) {
-  // network failure, timeout, or 502/503/504 — safe to retry
+  // network failure, timeout, or 502/503/504: safe to retry
 }
 ```
 
@@ -87,7 +87,7 @@ await api.get("/slow", { signal: controller.signal });
 controller.abort();
 ```
 
-Passing both together works too — whichever fires first wins.
+Passing both together works too: whichever fires first wins.
 
 ## Development
 

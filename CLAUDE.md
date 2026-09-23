@@ -4,14 +4,14 @@
 
 A single TypeScript package published as [`@grabreu/aduana`](https://www.npmjs.com/package/@grabreu/aduana): a lightweight, axios-style fetch client.
 
-Read `README.md` before making changes — it documents the actual public API (`Why`, `Errors`, `Interceptors`, `Timeout & cancellation`).
+Read `README.md` before making changes: it documents the actual public API (`Why`, `Errors`, `Interceptors`, `Timeout & cancellation`).
 
 ## General Rules
 
 - Keep changes scoped to the requested change.
 - Prefer existing patterns over introducing new abstractions.
 - Do not add dependencies unless they are necessary.
-- Do not fill gaps with assumptions when the user hasn't given the information — ask, or mark it as pending.
+- Do not fill gaps with assumptions when the user hasn't given the information: ask, or mark it as pending.
 - Do not claim a validation command passed unless it was actually run.
 - Code, comments, commit messages, and documentation are always written in English.
 
@@ -27,13 +27,13 @@ Read `README.md` before making changes — it documents the actual public API (`
 
 ### Audience
 
-A developer evaluating whether to add this as a dependency. Not onboarding material — keep it concise and skimmable.
+A developer evaluating whether to add this as a dependency. Not onboarding material, keep it concise and skimmable.
 
 ### Content Rules
 
 - State facts concisely. Avoid unnecessary explanations or trailing rationale.
 - Do not document information that is already obvious from the repository structure or configuration.
-- Do not invent features, API shapes, or future direction — mark undecided things as TODO.
+- Do not invent features, API shapes, or future direction: mark undecided things as TODO.
 - Document a capability only after it is implemented and verified.
 - Use proper Markdown headings (`##`, `###`), not bold text as headings.
 
@@ -54,4 +54,4 @@ Every exported function/class should have a matching `*.test.ts` file.
 
 ### Validation
 
-Run `pnpm check`, `pnpm typecheck`, `pnpm test`, and `pnpm build` before considering a change done — CI (`.github/workflows/ci.yml`) runs the same on push/PR to `main`.
+Run `pnpm check`, `pnpm typecheck`, `pnpm test`, and `pnpm build` before considering a change done. CI (`.github/workflows/ci.yml`) runs the same on push/PR to `main`.
